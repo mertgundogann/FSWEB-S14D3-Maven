@@ -1,22 +1,24 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
 package org.example.company;
 
-public class Holden extends Car{
+public class Holden extends Car {
     public Holden(int cylinders, String name) {
         super(cylinders, name);
     }
 
-    @Override
     public String startEngine() {
-        return getClass().getSimpleName() + ": The Holden's engine is starting";
+        return this.getClass().getSimpleName() + ": The Holden's engine is starting";
     }
 
-    @Override
     public String accelerate() {
-        return getClass().getSimpleName() + ": The Holden is accelerating";
+        return this.getClass().getSimpleName() + ": The Holden is accelerating";
     }
 
-    @Override
     public String brake() {
-        return getClass().getSimpleName() + ": The Holden is braking";
+        return this.getClass().getSimpleName() + ": The Holden is braking";
     }
 }

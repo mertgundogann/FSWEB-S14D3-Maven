@@ -1,3 +1,8 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
 package org.example.company;
 
 public class Car {
@@ -6,7 +11,6 @@ public class Car {
     private String name;
     private int wheels;
 
-
     public Car(int cylinders, String name) {
         this.cylinders = cylinders;
         this.name = name;
@@ -14,41 +18,47 @@ public class Car {
         this.wheels = 4;
     }
 
-
     public int getCylinders() {
-        return cylinders;
+        return this.cylinders;
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
-
-    @Override
     public String toString() {
-        return "Car [name=" + name + ", cylinders=" + cylinders + "]";
+        return "Car [name=" + this.name + ", cylinders=" + this.cylinders + "]";
     }
 
-    @Override
     public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null || getClass() != obj.getClass()) return false;
-        Car car = (Car) obj;
-        return cylinders == car.cylinders && name.equals(car.name);
+        if (this == obj) {
+            return true;
+        } else if (obj != null && this.getClass() == obj.getClass()) {
+            Car car = (Car)obj;
+            return this.cylinders == car.cylinders && this.name.equals(car.name);
+        } else {
+            return false;
+        }
     }
-
 
     public String startEngine() {
-        return "Car" + getClass().getSimpleName() + ": The car's engine is starting";
-    }
+        printSimpleName();
+        return "the car's engine is starting";
 
+    }
 
 
     public String accelerate() {
-        return getClass().getSimpleName() + "Car: The car is accelerating";
+        printSimpleName();
+        return "the car is accelerating";
+    }
+    private void printSimpleName(){
+        System.out.println("Class Name: "+getClass().getSimpleName());
     }
 
+
     public String brake() {
-        return getClass().getSimpleName() + ": The car is braking";
+        printSimpleName();
+        return "the car is braking";
     }
 }
